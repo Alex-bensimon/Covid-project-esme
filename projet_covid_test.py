@@ -5,22 +5,25 @@ Created on Tue Apr 12 09:32:54 2022
 @author: alcje
 """
 
-import json
 import datetime
+import json
 
+# PAS DE PANIQUE si t'as l'impression que ton code a bougé, j'ai fait un petit ménage automatique, 
+# je vous expliquerai à quoi ça sert mais rien a changé ! 
 
-date = datetime.date.today()#date du jour
-date_veille=date + datetime.timedelta(-1)#date de la veille 
+date = datetime.date.today()  # date du jour
+date_veille = date + datetime.timedelta(-1)  # date de la veille
 
-with open('data_full.json','r') as sample:#j'ouvre le json avec toutes les données
-    for line in sample: #on load chaques lignes
+with open("data_full.json", "r") as sample:  # j'ouvre le json avec toutes les données
+    for line in sample:  # on load chaques lignes
         line = json.loads(line.strip())
-        if str(line['date'])==str(date_veille): #si une date du fichier json correspond a la date d'hier, on retourne toute la ligne
+        if str(line["date"]) == str(
+            date_veille
+        ):  # si une date du fichier json correspond a la date d'hier, on retourne toute la ligne
             print(line)
 
-
-
-#test envoyer sur big query(pas finalisé)
+# test envoyer sur big query(pas finalisé) 
+# --> N'oublie pas le pip install de bigquery, et place le dans le fichier requirements.txt pour pas perdre les packages à installer.
 '''
 from google.cloud import bigquery
 client = bigquery.Client()#creation d'un nouveau client qui utilise GCP

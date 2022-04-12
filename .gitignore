@@ -1,2 +1,15 @@
 ok.txt
 gcp_credentials.json
+
+# Alex's files
+.DS_Store
+app/
+covid-api-env
+covid_api.py
+__pycache__
+covid_data.json
+departements-francais.csv
+Dockerfile
+write_to_bq.py
+get_regions.py
+covid_project_key.json
