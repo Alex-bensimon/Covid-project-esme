@@ -15,12 +15,15 @@ Etape 1 : Récupérer toutes les données existantes
 - Ajoutez de meme projet_covid_full_data.py et executez le en specifiant le nom de votre clé ainsi que le nom de votre base de données et de votre table
 - Executez le code 
 
+
 Etape 2 : Récupérez les données de la veille
 - Creez une Cloud function et mettez en code source celui contenu dans projet_covid_date_veille.py
+
 
 Etape 3 : Exectution du code quotidiennement 
 - Allez dans Cloud scheduler et associé votre Cloud function a celui du scheduler (vous trouverez l'URL Cible dans Cloud function)
 - pensez a ajoutez une frequence d'execution (pour ce projet nous avons choisi de l'executer tous les jours a 3h soit frequence : 0 3 * * *)
+
 
 Etape 4 : La visualisation des données
 - Le plus simple est de visualiser directement dans data studio ou vous pourrez creer un compte ou directement l'ouvrir depus BigQuery
