@@ -8,7 +8,6 @@ Projet réalisé dans le cadre de notre 4ème anée en école d'ingénieur.
 Ce projet permet de recuperer les données du covid depuis son existence selon les regions et les dates tout en mettant a jour quotidiennement les nouvelles données (cas hospitalisé, cas positif, cas en réanimation..)
 
 Comment fonctionne notre projet ?
-
 Etape 1 : Récupérer toutes les données existantes 
 - Pour se faire vous aurez besoin de creer un compte GCP puis creer une base de données et une table dans BigQuery.
 - Par la suite vous devez creer une clé credential que vous ajouterez dans votre dossier en local.
